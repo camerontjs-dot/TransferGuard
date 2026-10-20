@@ -1,0 +1,18 @@
+# User data and local run outputs are never public fixtures by default.
+/private/
+/local-data/
+/exports/
+/imports/
+/reports/
+/scratch/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+node_modules/
+/build/
+/dist/
+# Ignore rules are not a publication or privacy review.
