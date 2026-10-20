@@ -16,3 +16,5 @@ node_modules/
 /build/
 /dist/
 # Ignore rules are not a publication or privacy review.
+/demo/TransferGuard-Try-Me.html
+/evidence/
