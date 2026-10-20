@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TransferGuard synthetic demo workspace",
+  "description": "Not a production interchange format. Runtime also enforces duplicate ID/key refusal, valid UTF-8, no null bytes, nonblank scope, 1 MiB and 5000 total relationships. synthetic:true is self-declared, not a privacy classifier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "synthetic",
+    "scope",
+    "coverage",
+    "records",
+    "attachments"
+  ],
+  "properties": {
+    "format": {
+      "const": "transferguard-demo/v1"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "records",
+        "attachments",
+        "relationships"
+      ],
+      "properties": {
+        "records": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "attachments": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "relationships": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "text",
+          "links",
+          "attachments"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_-]{0,39}$"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 240
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 16000
+          },
+          "links": {
+            "type": "array",
+            "maxItems": 100,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Z0-9_-]{0,39}$"
+            }
+          },
+          "attachments": {
+            "type": "array",
+            "maxItems": 100,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z][A-Z0-9_-]{0,39}$"
+            }
+          }
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "content"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_-]{0,39}$"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 240
+          },
+          "content": {
+            "type": "string",
+            "maxLength": 16000
+          }
+        }
+      }
+    }
+  }
+}

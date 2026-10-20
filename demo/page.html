@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="__CSP__">
+<title>TransferGuard | Personal practice</title>
+<style>
+:root{color-scheme:light;--ink:#182936;--muted:#526475;--line:#d9e3e9;--paper:#fff;--ground:#f3f6f8;--accent:#116d78;--soft:#e6f2f3;--warn:#8a520f;--bad:#97322e;--good:#246548}
+*{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.48}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #e7a137;outline-offset:3px}header{background:var(--paper);border-bottom:1px solid var(--line)}.wrap{max-width:1180px;margin:auto;padding:26px 28px}.top{display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:750;font-size:24px;letter-spacing:-.7px}.logo{display:grid;place-items:center;border-radius:12px;background:var(--ink);color:white;width:42px;height:42px;font-size:17px;letter-spacing:0}.pill{display:inline-block;border:1px solid var(--line);border-radius:40px;padding:5px 12px;font-size:13px;color:var(--muted)}h1{font-size:clamp(29px,4vw,43px);line-height:1.14;letter-spacing:-1.1px;max-width:770px;margin:30px 0 12px}h2{font-size:20px;margin:0 0 14px;letter-spacing:-.3px}h3{font-size:16px;margin:0 0 6px}.intro{max-width:780px;color:var(--muted);margin:0 0 20px}.steps{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}.steps span{background:var(--ground);padding:7px 12px;border-radius:8px}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:22px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:20px}.small{font-size:13px;color:var(--muted)}.case{width:100%;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);text-align:left;padding:12px;margin:0 0 9px;font-size:14px}.case strong{display:block;font-size:14px}.case span{display:block;font-size:12px;line-height:1.4;margin-top:3px;color:var(--muted)}.case[aria-pressed=true]{background:var(--soft);border-color:var(--accent);box-shadow:inset 3px 0 var(--accent)}.case:hover{border-color:var(--accent)}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}.snapshot{background:var(--ground);padding:16px;border-radius:10px;min-width:0}.snapshot h3{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}.count{font-weight:720;font-size:27px;margin:6px 0 8px}.snapshot p{margin:0;font-size:13px;color:var(--muted)}.primary,.secondary{border:0;border-radius:9px;padding:11px 17px;font-weight:650}.primary{background:var(--accent);color:white}.secondary{background:var(--ground);color:var(--ink);border:1px solid var(--line)}.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.banner{padding:15px 17px;border-radius:10px;background:var(--ground);border-left:4px solid var(--muted);margin:16px 0}.banner.good{background:#edf6f0;border-color:var(--good)}.banner.bad{background:#fdf0ee;border-color:var(--bad)}.banner.warn{background:#fff6e8;border-color:var(--warn)}.banner strong{display:block;font-size:17px}.banner p{margin:5px 0 0;font-size:14px}.table-scroll{overflow:auto;margin:14px 0}table{border-collapse:collapse;width:100%;font-size:13px}th{text-align:left;background:var(--ground);font-weight:650}th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere;min-width:75px}td.evidence{max-width:260px;white-space:pre-wrap}details{margin-top:16px}summary{cursor:pointer;font-weight:620;padding:6px 0}ul{padding-left:20px}.subtle{border-top:1px solid var(--line);padding-top:12px;margin-top:20px}.import-step{padding:14px 0;border-bottom:1px solid var(--line)}.import-step:last-child{border-bottom:0}.import-step p{margin:4px 0 10px}.file{display:block;max-width:100%;font-size:14px;padding:7px 0}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-bottom:24px}code{font:13px ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}.hidden{display:none!important}.lede{display:flex;justify-content:space-between;gap:12px}.feedback{font-size:14px;margin-bottom:0}noscript{display:block;padding:30px;background:#fff6e8}@media(max-width:780px){.layout{grid-template-columns:minmax(0,1fr)}.layout>*{min-width:0}.wrap{padding:20px 18px}.top{align-items:flex-start;flex-direction:column}.cases{display:grid;grid-template-columns:1fr 1fr;gap:8px}.case{margin:0}.panel{padding:18px}.count{font-size:23px}.pair{gap:10px}h1{margin-top:22px}}@media(max-width:420px){.cases{grid-template-columns:1fr}.pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<noscript>This offline demo needs JavaScript. It does not need an account, a server, or a network connection.</noscript>
+<header><div class="wrap">
+<div class="top"><div class="brand"><span class="logo" aria-hidden="true">TG</span>TransferGuard</div><span class="pill">Personal practice · 0.0.1-demo · Synthetic only</span></div>
+<h1>Did everything arrive?<br>Did the links survive?</h1>
+<p class="intro">Try a small, invented workspace before we connect real applications. Compare the contents, investigate a connection, then practice exporting and importing a saved file.</p>
+<div class="steps"><span>1 &nbsp; Choose a sample</span><span>2 &nbsp; Run the check</span><span>3 &nbsp; Inspect the evidence</span><span>4 &nbsp; Try export / import</span></div>
+</div></header>
+<main class="wrap layout">
+<aside><section class="panel"><h2>Choose a sample</h2><div id="cases" class="cases" aria-label="Synthetic test cases"></div><p class="small">These defects were deliberately constructed. They are not findings about Evernote, Jira, or another application.</p></section>
+<section class="panel"><h2>Your test</h2><p class="feedback">Can you tell what changed, where the evidence is, and what was not checked?</p><p class="small">Try the healthy sample first, then “Same count, missing note” and “Link points to the wrong note.”</p><button class="secondary" id="feedback">Save feedback questions</button></section></aside>
+<div>
+<section class="panel" aria-labelledby="comparison-title">
+<div class="lede"><div><h2 id="comparison-title">Ready for a comparison</h2><p class="small" id="description"></p></div></div>
+<div class="pair"><div class="snapshot"><h3>Original sample</h3><div id="source-count" class="count"></div><p id="source-detail"></p></div><div class="snapshot"><h3 id="destination-label">Transferred sample</h3><div id="destination-count" class="count"></div><p id="destination-detail"></p></div></div>
+<div class="actions"><button id="run" class="primary">Run comparison</button><button id="save-report" class="secondary" disabled>Save report JSON</button></div>
+<div id="result" role="status" aria-live="polite" class="banner"><strong>No checks run yet</strong><p>Select a sample, then run the comparison.</p></div>
+<div id="findings"></div>
+<details id="relations-section" class="hidden"><summary id="relations-title">Existing relationships</summary><div id="relations"></div></details>
+<details><summary>Look inside the two samples</summary><div id="records"></div></details>
+<details id="expected"><summary>Show the expected result</summary><p id="expected-text" class="small"></p></details>
+<p class="small subtle">A clean result covers only these supplied synthetic snapshots. It does not prove a complete source account, approve new relationships, or give permission to delete originals.</p>
+</section>
+<section class="panel" aria-labelledby="transfer-title"><h2 id="transfer-title">Export / import practice</h2><p class="small">This is a real local JSON download and read-back, but only a toy file format. “Import” loads the saved sample into this page, not into a live application.</p>
+<div class="import-step"><h3>1. Export the original sample</h3><p class="small">Request a new synthetic package download. Your browser controls its save location.</p><button class="secondary" id="export">Download sample export</button></div>
+<div class="import-step"><h3>2. Import that saved file</h3><p class="small">Choose the file you just saved. Do not select company or personal exports.</p><label for="import-file" class="small">Synthetic TransferGuard export package (.json, up to 1 MiB)</label><input class="file" id="import-file" type="file" accept=".json,application/json"><p id="import-state" role="status" class="small">No saved file imported.</p></div>
+<div class="import-step"><h3>3. Check the imported result</h3><p class="small">Run the comparison above. You can also save the imported practice workspace as a new JSON download.</p><button class="secondary" id="save-workspace" disabled>Save imported workspace</button></div>
+</section>
+<section class="panel"><h2>For agents and scripts</h2><p class="small">The companion package contains a dependency-free Node CLI and an agent skill. Start with <code>node demo/cli.cjs describe</code>. It returns commands, read/write effects, limits, and exit codes as JSON. Write operations require a matching preview-plan token; that token is not proof of human consent.</p><p class="small">This page and the CLI share the same comparison engine. The HTML file alone does not contain the CLI.</p></section>
+</div>
+</main>
+<footer><div class="wrap">Working name. No account, remote assets, model calls, or automatic uploads in this demo. Browser comparisons happen in memory. Only your explicit download actions request files. Keep your originals.</div></footer>
+<script>__CORE__</script>
+<script>__SAMPLES__</script>
+<script>__APP__</script>
+</body>
+</html>
